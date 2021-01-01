@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const exphbs = require('express-handlebars');
 const orm = require('./config/orm');
-const PORT = 5050;
+const PORT = process.env.PORT || 5050;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true }))
