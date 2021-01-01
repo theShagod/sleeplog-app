@@ -1,0 +1,56 @@
+<h1>sleep app</h1>
+<h4>User: {{name}}</h4>
+<form id= "getform" method = "GET">
+    <div>
+        <input placeholder="Search for user...">
+        <button>Go to user</button>
+    </div>
+</form>
+
+<!-- started building a more user friendly form
+<form id= "postform"  method = "POST">
+    
+    <div>
+        <label for="year">Year (Format: XXXX): </label>
+        <input type="text" name = "year">
+
+        <label for="month">Month: </label>
+        <select name="month" id="month-selector">
+
+        </select>
+
+        <label for="day">Day: </label>
+        <select name="day" id="day-selector">
+
+        </select>
+
+        <label for="time">Time (Format: hh:mm)</label>
+        <input type="text" name="time">
+
+        <button>Add Entry</button>
+    </div>
+-->
+</form>
+<!--default action is current url-->
+<form method="POST" id="postform">
+    <label for="wakeup_date">When did you wakeup? (Format: YYYY-MM-DD hh:mm) </label>
+    <input type="text" name="wakeup_date" pattern= "^[0-9]{4}-[0-9]{1,2}-[0-9]{1,2} [0-9]{2}:[0-9]{2}$|^$">
+    <label for="bed_date">When did you go to bed? (Format: YYYY-MM-DD hh:mm) </label>
+    <input type="text" name="bed_date" pattern= "^[0-9]{4}-[0-9]{1,2}-[0-9]{1,2} [0-9]{2}:[0-9]{2}$|^$">
+    <button>submit</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Wakeup Time</th>
+            <th scope="col">Bed Time</th>
+        </tr>
+    </thead>
+    {{#each table}}
+    <tr>
+        <th>{{this.wakeup_date}}</th>
+        <th>{{this.bed_date}}</th>
+    </tr>
+    {{/each}}
+</table>
