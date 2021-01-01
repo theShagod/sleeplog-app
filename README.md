@@ -1,6 +1,5 @@
 ### Sleep Logger
-App that uses MySQL database to store your wakeup and sleep times.
-
+App that uses MySQL database to store your wakeup and sleep times. The app is deployed [here](https://sleeplog-app.herokuapp.com/).
 ### Install and Run
 `npm install`
 `node server.js`
